@@ -1,0 +1,191 @@
+
+   *{
+      box-sizing: border-box;
+   }
+  
+   body {margin: 15px,5px;
+   font-family: Arial, Helvetica, sans-serif;
+  background-image: url(../img/TO/Aamassteak.jpg);
+  background-color: rgb(226, 226, 222);
+  background-size: 2550px ,855px;
+  background-repeat: no-repeat;
+  background-position: bottom; 
+      
+   }
+      
+   header { 
+      background-color: #cece67;
+            border-bottom: 1px rgb(247, 151, 6) solid; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3px;
+   }
+  
+   header img {
+       width: 80px;
+   }
+  
+  h1{
+  
+ margin: 20px,20px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size:x-large; 
+   font-weight: bold; 
+   color: yellow;
+    text-align: left;
+  }
+  
+  .section { display:flex;
+  }
+  
+  .container {
+      width: 2540px; height: 500px; border:1px; solid: rgb(47, 0, 255); margin: 3 auto;
+      background-color: rgb(199, 238, 189);  
+      display:flex;
+      align-items:center;
+      justify-items: center;
+      content-position:centers;
+      margin: 3px;
+  }
+  
+      .col {
+          width: 260px; height: 490px;
+          background-color:rgb(43, 21, 240); align-items::after;
+          border: 1px solid rgb(0, 100px, 0); padding: 25px; margin: 50px;
+          }
+  
+        
+       nav ul {
+          display: flex;
+          padding: 0;
+          margin: 0;
+          list-style: none;
+  
+       }
+  
+       nav li {
+          border: 1px, rgb(183, 220, 20);
+          padding: 10px;
+          margin: 20px;
+          background-color: #cece67;
+          font-weight: bold;
+          text-decoration: none;
+  
+       }
+  
+       nav a:hover {
+          
+          background-color: #cece67;
+       }
+  
+       main {
+          margin: 12px;}
+          
+        .h1 {font-family:Arial, Helvetica, sans-serif; 
+        font-size:x-large; 
+        font-weight: bold; 
+        color: yellow; 
+        text-align: left;}
+  
+  
+  section { display:flex;
+         margin: 5pix;
+         display: flex;
+         float: left;
+      align-items:center;
+      justify-content:center;
+      margin: 3px;
+      font-family:Arial, Helvetica, sans-serif; 
+              font-size:medium; 
+              font-weight: bold; 
+              color: yellow; 
+              text-align: center
+  }
+  
+  section img {
+      width: 100px;
+      display: flex;
+      align-self:center;
+      justify-content:center;
+      margin: 3px;
+  }
+       article {
+          border: 1px rgb(255, 255, 255) solid;
+          padding: 30px;
+          margin: 20px;}
+     .fit-picture {
+           width: 200px;
+           display: flex;
+           align-self:center;
+       }
+  
+  .toparagarph {border: 0px red solid;
+      padding: 1px;
+      margin: 65px;
+      width: 80px;
+  font-family:Arial, Helvetica, sans-serif; 
+  font-size:x-large; 
+  font-weight: bold; 
+  color: #fbff00; 
+  text-align: left;
+  }
+  .Gallery-img {
+         width: 100px;
+         display: flex;
+         align-self:inherit;
+         justify-content:center;
+         margin: 3px;
+         font-family:Arial, Helvetica, sans-serif; 
+              font-size:medium; 
+              font-weight: bold; 
+              color: yellow; 
+              text-align: left;
+     }
+          article {
+             border: 1px hsl(0, 22%, 96%) solid;
+             padding: 30px;
+             margin: 20px;}
+         
+            
+        .fit-picture {
+              width: 200px;
+              display: flex;
+              display-box:center;
+              align-self:center; 
+              
+          }
+     
+
+  .Colum{ width: 650px;
+   display: flex;
+   justify-content:left;
+   margin: 5px;
+   font-family:Arial, Helvetica, sans-serif; 
+   font-size:xx-large; 
+   font-weight:lighter; 
+   color: rgb(255, 255, 255); 
+   text-align: center;
+   padding: 140px;
+   margin: 30px;
+   font-size:x-large; 
+   font-weight:lighter; 
+   color: #fbff00; 
+   text-align: left;
+
+  }
+
+
+  .Foot{
+  background-color: #cece67;
+  background-size: 2550px ,30px;
+  font-family:Arial, Helvetica, sans-serif; 
+  font-size:medium; 
+  font-weight:lighter; 
+  color: rgb(0, 0, 0); 
+  text-align: center;
+  border: 1px #5eff00 solid;
+  padding: 9px;
+
+  }
+

@@ -1,0 +1,136 @@
+
+   *{
+    box-sizing: border-box;
+ }
+
+ body {margin: 5px,5px;
+ font-family: Arial, Helvetica, sans-serif;
+background-image: url(../img/Chiff-Ambions.jpg);
+background-color: rgb(226, 226, 222);
+background-size: 2540px ,655px;
+background-repeat: no-repeat;
+background-position: backdrop; 
+    
+ }
+ header { 
+   background-color: #cece67;; 
+   border-bottom: 1px rgb(247, 151, 6) solid; 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 3px;
+ }
+ header img { 
+     width: 80px;
+ }
+
+h1{
+   margin: 5px,5px;
+ font-family: Arial, Helvetica, sans-serif;
+ color: #fbff00; 
+ font-size:x-large; 
+ font-weight: bold; 
+ color: yellow; 
+ text-align: left;
+}
+.section { display:flex;
+}
+
+.container {
+   background-size: 2550px
+   height: 600px; 
+   border:0px; solid: rgb(47, 0, 255); 
+   margin: 0;
+   background-color: rgb(176, 221, 153);  
+   display:flex;
+   align-items:center;
+   justify-items:center;
+   content-position:center;
+   margin: 1px;
+}
+
+    .col {
+        width: 260px; height: 490px;
+        background-color:yellow; align-items::after;
+        border: 1px solid rgb(0, 100px, 0); padding: 25px; margin: 50px;
+        }
+
+      
+     nav ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+     }
+
+     nav li {
+      border: 1px, rgb(183, 220, 20);
+      padding: 10px;
+      margin: 20px;
+      background-color: #cece67;
+      font-weight: bold;
+      text-decoration: none;
+     }
+
+     nav a:hover {
+      background-color: #cece67;
+     }
+
+     main {
+        margin: 0PX;}
+        
+      .h1 {font-family:Arial, Helvetica, sans-serif; 
+      font-size:x-large; 
+      font-weight: bold; 
+      color: yellow; text-align: center;}
+
+
+section { display:flex;
+       margin: 5pix;
+       display: flex;
+    align-items:center;
+    justify-content:center;
+    margin: 3px;
+}
+
+section img {
+    width: 100px;
+    display: flex;
+    align-self:center;
+    justify-content:center;
+    margin: 3px;
+    .h4 {font-family:Arial, Helvetica, sans-serif; 
+      font-size:x-large; 
+      font-weight: bold; 
+      color: yellow; text-align: center;}
+}
+     article {
+        border: 1px red solid;
+        padding: 5px;
+        margin: 5px;}
+   .fit-picture {
+         width: 200px;
+         display: flex;
+         align-self:celeft;    
+     }
+
+.toparagarph {border: 0px red solid;
+   padding: 45px;
+   margin: 48px;
+font-family:Arial, Helvetica, sans-serif; 
+font-size:x-large; 
+font-weight: bold; 
+color: #fbff00; 
+text-align: center;
+}
+
+.Foot{
+   background-color: #cece67;
+  background-size: 2550px ,655px;
+  font-family:Arial, Helvetica, sans-serif; 
+  font-size:medium; 
+  font-weight:lighter; 
+  color: rgb(0, 0, 0); text-align: center;
+  border: 2px #5eff00 solid;
+             padding: 30px;
+  }
