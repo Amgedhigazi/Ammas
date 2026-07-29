@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Brownies — premium restaurant in Muscat, Oman. Exceptional food, elegant ambiance, unforgettable dining.">
-    <title>Brownies</title>
+    <meta name="description" content="Browniz — premium restaurant in Muscat, Oman. Exceptional food, elegant ambiance, unforgettable dining.">
+    <title>Browniz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aladdin&family=MonteCarlo&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Css/styleweb.css">
     <link rel="stylesheet" href="./Css/shared.css">
     <link rel="icon" type="image/png" href="./img/Brownies logo.png">
@@ -15,54 +15,46 @@
 
   <header></header>
 
-  <main>
-    <hr>
-    <div class="topimg"><img src="./img/TO/Aamassteak.jpg" alt="Brownies"></div>
-    <h1>In Our Home</h1>
-    <h1>The Food you like</h1>
-  </main>
-
-  <section>
-    <div class="Colum">
-      <p><img src="./img/Brownies logo.png" alt="Brownies logo">
-        WELCOME TO BROWNIES — WHERE QUALITY MEETS TASTE.
-        WE SOURCE THE FINEST INGREDIENTS AND BRING YOU
-        FRESH, DELICIOUS FOOD FROM OUR KITCHEN TO YOUR TABLE.
-        OUR AIM IS YOUR SATISFACTION.
-        PLEASE ENJOY THE TIME YOU SPEND WITH US. "WELCOME"
-      </p>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-text">
+      <h1 class="hero-h1">It is not just the food!<br><em>It is where you would be you..</em></h1>
+      <div class="hero-lines">
+        <p class="hero-line">Welcome to Browniz &mdash; where quality meets taste</p>
+        <p class="hero-line">and every visit feels like coming home.</p>
+        <p class="hero-line">We source the finest ingredients with care and a deep love for food,</p>
+        <p class="hero-line">bringing you unforgettable flavours and warm, inviting aromas.</p>
+        <p class="hero-line">Every dish is a moment of pure delight,</p>
+        <p class="hero-line">crafted within a magical atmosphere unlike any other.</p>
+        <p class="hero-line">This is your Browniz experience &mdash; please enjoy every moment.</p>
+      </div>
     </div>
   </section>
 
-  <hr>
-
-  <section>
+  <section class="specialties-section">
+    <h2 class="specialties-heading">Our Specialties</h2>
+    <p class="specialties-desc">From golden breakfast platters to rich evening dinners — each specialty is made with hand-picked ingredients, cooked to perfection, and served with the warmth that makes Browniz a place worth coming back to.</p>
     <section class="Gallery">
       <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/DSC_0660-2.jpg" alt="Breakfast"></div>
         <h4>Breakfast</h4>
       </article>
-
       <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/AMG_5563.JPG" alt="Lunch"></div>
         <h4>Lunch</h4>
       </article>
-
       <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/DSC04828.jpg" alt="Dinner"></div>
         <h4>Dinner</h4>
       </article>
-
       <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/DSC05652.jpg" alt="Snacks"></div>
         <h4>Snacks</h4>
       </article>
-
       <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/DSC05554.jpg" alt="Snacks and Combo"></div>
         <h4>Snacks and Combo</h4>
       </article>
-
       <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/DSC05307.jpg" alt="Pizza"></div>
         <h4>Pizza</h4>
@@ -91,37 +83,8 @@
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
   </script>
 
-  <section class="promos">
-    <h2 class="promos-heading">Special Offers</h2>
-    <div class="promos-grid">
-      <article class="promo-card" onclick="openLightbox(this)">
-        <img class="fit-picture" src="./img/New folder/promo-ramadan-en.jpg" alt="Ramadan Grilling Promotion">
-        <h4>Ramadan Special</h4>
-      </article>
-      <article class="promo-card" onclick="openLightbox(this)">
-        <img class="fit-picture" src="./img/New folder/promo-ramadan-ar.jpg" alt="مع براونيز رمضان أحلى">
-        <h4>رمضان مع براونيز</h4>
-      </article>
-    </div>
-  </section>
-
-  <hr>
-
   <footer>
-    <div class="Foot">
-      <p>
-        <a href="https://www.facebook.com/pages/category/Steakhouse/Aamas-steak-House-1561715920733862/"><h4>Brownies Facebook</h4></a>
-        Brownies<br>
-        Madinat Sultan Qaboos, Muscat, Oman, Al Bashair St. 114, Al Madina Plaza<br>
-        -----------------------------------------<br>
-        Contact<br>
-        Telefon: +968 9232 2927 | +96 8976 20155 | E-Mail: aamas.steakhouse@gmail.com<br>
-        -----------------------------------------<br>
-        Opening hours<br>
-        Monday to Saturday 15:00 - 22:00 Pm<br>
-        Friday 17:00 - 22:00 Pm
-      </p>
-    </div>
+    <div class="Foot"></div>
   </footer>
 
   <script src="./js/site.js"></script>

@@ -26,37 +26,6 @@ header {
   z-index: 100;
 }
 
-header > img {
-  width: 80px;
-  height: auto;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  padding: 8px 16px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #222;
-  font-weight: bold;
-  font-size: 15px;
-  transition: color 0.25s;
-}
-
-nav a:hover {
-  color: #fff;
-}
-
-header input {
-  display: none;
-}
 
 /* ── Hide hr dividers ── */
 hr {
@@ -248,9 +217,13 @@ section:has(.toparagarph) {
   color: #ccc;
 }
 
+.Muzamel article h2,
 .Muzamel article h4 {
-  font-size: 20px;
+  font-size: 22px;
   color: #cece67;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   margin-bottom: 14px;
   display: block;
 }
@@ -477,13 +450,15 @@ section:has(.fit-picture) article p {
 
 .combo-menu-grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
-  max-width: 960px;
+  width: 70%;
   margin: 0 auto;
 }
 
 .combo-menu-grid article {
+  flex: 1 1 0;
+  min-width: 0;
   cursor: pointer;
   border-radius: 8px;
   overflow: hidden;

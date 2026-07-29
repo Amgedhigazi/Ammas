@@ -7,7 +7,7 @@
   --card-bg-2: #2a2a2a;
   --card-border: #3a3a3a;
   --text-muted: #aaa;
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'MonteCarlo', 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', Arial, Helvetica, sans-serif;
 }
 
@@ -16,9 +16,42 @@ body {
   font-family: var(--font-body);
 }
 
-h1, h2 {
-  font-family: var(--font-display);
+h1 {
+  font-family: 'MonteCarlo', 'Playfair Display', Georgia, serif;
+  font-weight: 400;
   letter-spacing: 0.01em;
+  text-transform: lowercase;
+}
+
+h2 {
+  font-family: 'Aladdin', 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+h4 {
+  font-family: 'Aladdin', 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ── Page hero heading ── */
+main h1 {
+  text-align: center;
+  font-size: 42px;
+  padding: 24px 32px 12px;
+}
+
+/* ── Hero intro paragraph ── */
+.toparagarph {
+  font-size: 20px !important;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center !important;
+  line-height: 1.75;
+  min-height: 60px;
 }
 
 /* ── Page load fade ── */
@@ -43,48 +76,131 @@ body {
   transform: translateY(0);
 }
 
-/* ── Active nav link ── */
-nav a.nav-active {
+/* ── Header ── */
+header {
+  height: 72px;
+  padding: 0 28px !important;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.18);
+  border-bottom: 3px solid #9a9400 !important;
+}
+
+/* ── Logo + brand ── */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.header-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+.header-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
   color: #111;
-  font-weight: 900;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  letter-spacing: 0.03em;
+}
+
+.brand-sub {
+  font-family: 'Aladdin', 'Playfair Display', Georgia, serif;
+  font-style: normal;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #333;
+  margin-top: 3px;
+}
+
+/* ── Nav links — stacked icon + label ── */
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 2px;
+}
+
+nav li {
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #1a1a1a;
+  border-radius: 8px;
+  font-size: inherit;
+  font-weight: normal;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+nav a:hover {
+  background: rgba(0,0,0,0.1);
+  color: #000;
+}
+
+nav a.nav-active {
+  background: rgba(0,0,0,0.13);
+  color: #000;
+  font-weight: 700;
+}
+
+/* ── Nav icon + label ── */
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 /* ── Hamburger button ── */
 .nav-toggle {
   display: none;
   background: none;
-  border: none;
-  font-size: 26px;
+  border: 2px solid rgba(0,0,0,0.3);
+  border-radius: 6px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
   line-height: 1;
   cursor: pointer;
-  color: #222;
-  padding: 4px 6px;
-}
-
-/* ── Header logo link ── */
-.header-logo {
-  display: flex;
+  color: #111;
   align-items: center;
-  text-decoration: none;
+  justify-content: center;
   flex-shrink: 0;
+  transition: background 0.18s ease;
 }
 
-.header-logo img {
-  width: 80px;
-  height: auto;
-  display: block;
-}
-
-/* ── Nav icons ── */
-.nav-icon {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 5px;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
+.nav-toggle:hover {
+  background: rgba(0,0,0,0.1);
 }
 
 /* ── Lightbox (shared across all pages) ── */
@@ -299,10 +415,12 @@ footer {
   header {
     flex-wrap: wrap;
     position: relative;
+    height: auto;
+    padding: 10px 16px !important;
   }
 
   .nav-toggle {
-    display: block;
+    display: flex;
   }
 
   nav {
@@ -316,15 +434,28 @@ footer {
   }
 
   nav ul {
-    flex-direction: column;
-    padding: 4px 0;
-    background-color: var(--olive);
+    flex-direction: column !important;
+    padding: 6px 0 !important;
+    background-color: var(--olive) !important;
+    gap: 0 !important;
   }
 
   nav li {
-    padding: 11px 20px;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
     border-top: 1px solid rgba(0, 0, 0, 0.09);
+  }
+
+  nav a {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    padding: 12px 18px !important;
+    border-radius: 0 !important;
+  }
+
+  .nav-label {
+    font-size: 12px;
   }
 
   /* Service / Contact content rows */
