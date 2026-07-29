@@ -38,24 +38,85 @@
     </section>
   </main>
 
-  <section class="container">
-    <article>
-      <img src="./img/Amas map.png" alt="Map">
+  <!-- Map + contact details -->
+  <section class="container contact-row">
+    <article class="map-article">
+      <iframe
+        src="https://maps.google.com/maps?q=23.6009884,58.4553897&z=17&output=embed"
+        width="100%"
+        height="340"
+        style="border:0; border-radius:8px; display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        title="Brownies on Google Maps">
+      </iframe>
     </article>
-    <article>
-      <p><a href="https://www.google.com/maps/place/23%C2%B036'03.6%22N+58%C2%B027'19.4%22E/@23.6009884,58.4553897,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa2102c48729e549c!8m2!3d23.6009884!4d58.4553897"><h3>Find Us on Google Maps!</h3></a></p>
-      <p>Welcome to Brownies — where quality is not compromised. You can easily find us on Google, just click the link above.</p>
+    <article class="contact-details">
+      <h2>Find Us</h2>
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Al Bashair St. 114, Al Madina Plaza<br>Madinat Sultan Qaboos, Muscat, Oman
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.18 21 3 13.82 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+          +968 9232 2927 &nbsp;|&nbsp; +968 9762 0155
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          aamas.steakhouse@gmail.com
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm1 14H11V11h2v5zm0-7H11V7h2v2z"/></svg>
+          Mon–Sat: 15:00 – 22:00<br>Friday: 17:00 – 22:00
+        </li>
+      </ul>
+      <a class="directions-btn"
+         href="https://www.google.com/maps/place/23%C2%B036'03.6%22N+58%C2%B027'19.4%22E/@23.6009884,58.4553897,17z"
+         target="_blank" rel="noopener">
+        Get Directions &rarr;
+      </a>
     </article>
   </section>
 
-  <section class="container">
-    <article>
-      <img src="./img/Booking.jpg" alt="Book a Table">
-    </article>
-    <article>
-      <h2>Book Your Table!</h2>
-      <p>Welcome to Brownies — where quality is in the provision of premium ingredients from the best natural sources, which receive our attention from the farm to the table where it reaches you fresh and delicious. Our aim at Brownies is your satisfaction. Please enjoy the time you spend with us. "Welcome."</p>
-    </article>
+  <!-- Reservation form -->
+  <section class="reservation-section">
+    <h2>Book Your Table</h2>
+    <form class="reservation-form"
+          action="mailto:aamas.steakhouse@gmail.com"
+          method="POST"
+          enctype="text/plain">
+      <div class="form-row">
+        <input type="text"  name="Name"  placeholder="Your Name"     required>
+        <input type="tel"   name="Phone" placeholder="Phone Number"   required>
+      </div>
+      <div class="form-row">
+        <input type="email" name="Email" placeholder="Email Address"  required>
+        <input type="date"  name="Date"                               required>
+      </div>
+      <div class="form-row">
+        <select name="Guests" required>
+          <option value="" disabled selected>Number of Guests</option>
+          <option>1 person</option>
+          <option>2 people</option>
+          <option>3–4 people</option>
+          <option>5–6 people</option>
+          <option>7+ people</option>
+        </select>
+        <select name="Time" required>
+          <option value="" disabled selected>Preferred Time</option>
+          <option>15:00</option>
+          <option>16:00</option>
+          <option>17:00</option>
+          <option>18:00</option>
+          <option>19:00</option>
+          <option>20:00</option>
+          <option>21:00</option>
+        </select>
+      </div>
+      <textarea name="Message" placeholder="Special requests or dietary requirements…" rows="3"></textarea>
+      <button type="submit">Reserve My Table</button>
+    </form>
   </section>
 
   <hr>
