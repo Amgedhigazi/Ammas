@@ -61,6 +61,55 @@
     }
   });
 
+  /* ── Dynamic footer ── */
+  var footer = document.querySelector('footer');
+  if (footer) {
+    footer.innerHTML =
+      '<div class="footer-inner">' +
+        '<div class="footer-brand">' +
+          '<img src="./img/Brownies logo.png" alt="Brownies">' +
+          '<p>Quality meets taste.<br>Farm to table, fresh every day.</p>' +
+          '<div class="footer-social">' +
+            '<a href="https://www.facebook.com/pages/category/Steakhouse/Aamas-steak-House-1561715920733862/" aria-label="Facebook" target="_blank" rel="noopener">' +
+              '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>' +
+            '</a>' +
+            '<a href="https://www.instagram.com/amgedhigazi/" aria-label="Instagram" target="_blank" rel="noopener">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>' +
+            '</a>' +
+          '</div>' +
+        '</div>' +
+        '<div class="footer-col">' +
+          '<h4>Quick Links</h4>' +
+          '<ul>' +
+            '<li><a href="./Index.html">Home</a></li>' +
+            '<li><a href="./Menu.html">Menu</a></li>' +
+            '<li><a href="./Service and Event.html">Services &amp; Events</a></li>' +
+            '<li><a href="./Team.html">Our Team</a></li>' +
+            '<li><a href="./Contact and reservaion.html">Reservation</a></li>' +
+          '</ul>' +
+        '</div>' +
+        '<div class="footer-col">' +
+          '<h4>Contact</h4>' +
+          '<address>Al Bashair St. 114, Al Madina Plaza<br>Madinat Sultan Qaboos<br>Muscat, Oman</address>' +
+          '<p>+968 9232 2927<br>+968 9762 0155</p>' +
+          '<p><a href="mailto:aamas.steakhouse@gmail.com">aamas.steakhouse@gmail.com</a></p>' +
+        '</div>' +
+        '<div class="footer-col">' +
+          '<h4>Opening Hours</h4>' +
+          '<table class="hours-table">' +
+            '<tr><td>Mon &ndash; Sat</td><td>15:00 &ndash; 22:00</td></tr>' +
+            '<tr><td>Friday</td><td>17:00 &ndash; 22:00</td></tr>' +
+            '<tr><td>Sunday</td><td>Closed</td></tr>' +
+          '</table>' +
+        '</div>' +
+      '</div>' +
+      '<div class="footer-bottom">' +
+        '<p>&copy; 2024 Brownies &mdash; All rights reserved &nbsp;|&nbsp; Photography &amp; Design by ' +
+          '<a href="https://amgedhigazi.kavyar.site/" target="_blank" rel="noopener">Amged Higazi</a>' +
+        '</p>' +
+      '</div>';
+  }
+
   /* ── Scroll reveal ── */
   if (!('IntersectionObserver' in window)) return;
 
