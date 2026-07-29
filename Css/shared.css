@@ -63,6 +63,20 @@ nav a.nav-active {
   padding: 4px 6px;
 }
 
+/* ── Header logo link ── */
+.header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.header-logo img {
+  width: 80px;
+  height: auto;
+  display: block;
+}
+
 /* ── Nav icons ── */
 .nav-icon {
   display: inline-flex;

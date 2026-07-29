@@ -1,6 +1,24 @@
 (function () {
   'use strict';
 
+  /* ── Dynamic header ── */
+  var header = document.querySelector('header');
+  if (header) {
+    header.innerHTML =
+      '<a href="./Index.html" class="header-logo">' +
+        '<img src="./img/Brownies logo.png" alt="Brownies">' +
+      '</a>' +
+      '<nav>' +
+        '<ul>' +
+          '<li><a href="./Index.html">Home</a></li>' +
+          '<li><a href="./Menu.html">Menu</a></li>' +
+          '<li><a href="./Service and Event.html">Services</a></li>' +
+          '<li><a href="./Team.html">Team</a></li>' +
+          '<li><a href="./Contact and reservaion.html">Reservation</a></li>' +
+        '</ul>' +
+      '</nav>';
+  }
+
   /* ── Active nav link ── */
   var page = location.pathname.split('/').pop() || 'Index.html';
   document.querySelectorAll('nav a').forEach(function (a) {
