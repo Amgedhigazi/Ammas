@@ -361,11 +361,11 @@ section:has(.fit-picture) article p {
 
 .enjoy-offer-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 16px 24px;
+  text-align: center;
+  gap: 8px;
+  padding: 20px 24px;
   margin: 0 -24px 24px;
   background-color: #111;
   border-top: 3px solid #cece67;
@@ -378,15 +378,12 @@ section:has(.fit-picture) article p {
   font-weight: bold;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  flex-shrink: 0;
 }
 
 .enjoy-offer-tagline {
   color: #aaa;
   font-size: 13px;
   font-style: italic;
-  text-align: right;
-  max-width: 340px;
   line-height: 1.5;
 }
 
