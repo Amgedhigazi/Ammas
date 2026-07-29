@@ -428,13 +428,14 @@ section:has(.fit-picture) article p {
 }
 
 .offer-card.card-zoom {
-  width: 180px;
+  width: 200px;
 }
 
 .offer-card.card-zoom img {
   width: 100%;
-  height: 140px;
+  height: 160px;
   object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform 0.35s ease;
 }
