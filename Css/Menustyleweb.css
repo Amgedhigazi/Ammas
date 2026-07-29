@@ -212,6 +212,8 @@ section:has(.toparagarph) {
   justify-content: center;
   gap: 36px;
   padding: 40px 32px;
+  border-top: 3px solid #cece67;
+  margin-top: 10px;
   background-color: #1a1a1a;
 }
 
