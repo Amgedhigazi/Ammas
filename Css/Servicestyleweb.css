@@ -83,9 +83,7 @@ h1 {
 }
 
 hr {
-  border: none;
-  border-top: 1px solid rgba(206, 206, 103, 0.4);
-  margin: 8px 0;
+  display: none;
 }
 
 /* ── Intro paragraph ── */
