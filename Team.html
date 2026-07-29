@@ -33,27 +33,27 @@
 
     <div class="container">
 
-      <div class="col"><p>
+      <div class="col" onclick="openLightbox(this)"><p>
         <a href="https://www.facebook.com/pages/category/Steakhouse/Aamas-steak-House-1561715920733862/"><h4>Firnandos</h4></a>
         Firnandos our Best Chef of the year 2018 in Besteria &amp; Basta in the region of Oman Wusta states. Also he is a prize winner of many competitions.
       </p><img class="fit-picture" src="./img/DSC05256.png" alt="Chef"></div><br>
 
-      <div class="col"><p>
+      <div class="col" onclick="openLightbox(this)"><p>
         <a href="https://www.facebook.com/pages/category/Steakhouse/Aamas-steak-House-1561715920733862/"><h4>Esabela &amp; Martin</h4></a>
         Esabela &amp; Martin — Best Chef assistant and Front Desk Customer comfort team of the House. With them you are absolutely in good hands.
       </p><img class="fit-picture" src="./img/mz fotos to print/DSC_7127.JPG" alt="Team member"></div><br>
 
-      <div class="col"><p>
+      <div class="col" onclick="openLightbox(this)"><p>
         <a href="https://www.facebook.com/pages/category/Steakhouse/Aamas-steak-House-1561715920733862/"><h4>Chef Muzamel</h4></a>
         Chef Muzamel — Senior Chef in House, specialist in Sea Food Grill and Combos.
       </p><img class="fit-picture" src="./img/mz fotos to print/DSC_4652.jpg" alt="Chef Muzamel"></div><br>
 
-      <div class="col"><p>
+      <div class="col" onclick="openLightbox(this)"><p>
         <a href="https://www.facebook.com/pages/category/Steakhouse/Aamas-steak-House-1561715920733862/"><h4>Tomas Hoyin</h4></a>
         Tomas Hoyin — Creative campaign controller with absolutely stunning character full of energy.
       </p><img class="fit-picture" src="./img/mz fotos to print/IMG-20200127-WA0050.jpg" alt="Tomas Hoyin"></div><br>
 
-      <div class="col"><p>
+      <div class="col" onclick="openLightbox(this)"><p>
         <a href="https://www.facebook.com/pages/category/Steakhouse/Aamas-steak-House-1561715920733862/"><h4>Dr. Dressman</h4></a>
         Our Head Chef in House — specialist in continental and African cuisine with strong practice in managing.
       </p><img class="fit-picture" src="./img/mz fotos to print/IMG-20200127-WA0042.jpg" alt="Dr. Dressman"></div>
@@ -65,48 +65,69 @@
   <hr>
 
   <section>
-    <article>
+    <article onclick="openLightbox(this)">
       <img class="fit-picture" src="./img/mz fotos to print/DSC_1629.jpg" alt="Breakfast">
       <h4>Breakfast</h4>
       <p>Toasted slice bread spread with mayonnaise stuffed with mayo mix chicken or smoked turkey or sliced cheddar cheese, served with tomato and salad &amp; French fries.</p>
     </article>
 
-    <article>
+    <article onclick="openLightbox(this)">
       <img class="fit-picture" src="./img/mz fotos to print/DSC04804.jpg" alt="Lunch">
       <h4>Lunch Main Course</h4>
       <p>BROWNIES PASTA Special — Pasta Penne (Served with tomato or Alfredo sauce). Add extra Beef / Chicken / Shrimp or Mushroom / Broccoli.</p>
     </article>
 
-    <article>
+    <article onclick="openLightbox(this)">
       <img class="fit-picture" src="./img/mz fotos to print/DSC05387.jpg" alt="Dinner">
       <h4>Dinner</h4>
       <p>Quesadilla Chicken Vegetable Mix, wings Chicken BBQ Crispy, liver sautéed Lemon, ball fish sesame steamed, lollipop Chicken, Guacamole.</p>
     </article>
 
-    <article>
+    <article onclick="openLightbox(this)">
       <img class="fit-picture" src="./img/mz fotos to print/DSC05693.JPG" alt="Snacks and Combo">
       <h4>Snacks and Combo</h4>
       <p>Chicken or Fish, wings Chicken BBQ Crispy, liver sautéed Lemon, ball fish sesame steamed, lollipop Chicken, Guacamole served with stick carrot &amp; celery.</p>
     </article>
 
-    <article>
+    <article onclick="openLightbox(this)">
       <img class="fit-picture" src="./img/mz fotos to print/AMG_5371.JPG" alt="Snacks and Combo">
       <h4>Snacks and Combo</h4>
       <p>Chicken or Fish, Quesadilla Chicken Vegetable Mix, wings Chicken BBQ Crispy, liver sautéed Lemon, ball fish sesame steamed, lollipop Chicken, Guacamole.</p>
     </article>
 
-    <article>
+    <article onclick="openLightbox(this)">
       <img class="fit-picture" src="./img/mz fotos to print/DSC04929.JPG" alt="Dessert">
       <h4>Dessert</h4>
       <p>BROWNIES BLAST — Warm chocolate brownie served with vanilla ice cream and topped with nuts — the best choice in our dessert selection.</p>
     </article>
 
-    <article>
+    <article onclick="openLightbox(this)">
       <img class="fit-picture" src="./img/mz fotos to print/DSC04969.JPG" alt="Dessert">
       <h4>Dessert</h4>
       <p>Brownies Crème Caramel served with vanilla ice cream and topped with nuts — very light after a delicious lunch.</p>
     </article>
   </section>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
+
+  <script>
+    function openLightbox(card) {
+      const img = card.querySelector('img');
+      const h4 = card.querySelector('h4');
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox-caption').textContent = h4 ? h4.textContent : img.alt;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
 
   <footer>
     <div class="Foot">

@@ -121,6 +121,13 @@ hr {
   color: #222;
   line-height: 1.5;
   text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.col:hover {
+  transform: translateY(-4px);
+  border-color: #cece67;
 }
 
 .col h4 {
@@ -162,6 +169,12 @@ section article {
   padding: 0;
   margin: 0;
   border-top: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+section article:hover {
+  opacity: 0.85;
 }
 
 section article img {
@@ -184,6 +197,54 @@ section article p {
   font-size: 12px;
   padding: 4px 8px 8px;
   line-height: 1.4;
+}
+
+/* ── Lightbox ── */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+#lightbox-caption {
+  margin-top: 16px;
+  color: #fbff00;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+}
+
+#lightbox-close:hover {
+  color: #cece67;
 }
 
 /* ── Footer ── */
