@@ -375,12 +375,13 @@ section:has(.fit-picture) article p {
   justify-content: center;
   gap: 0;
   position: relative;
+  width: 100%;
 }
 
 .carousel-track-outer {
   overflow: hidden;
-  width: min(700px, 92vw);
-  border-radius: 8px;
+  width: 100%;
+  border-radius: 0;
   box-shadow: 0 8px 32px rgba(0,0,0,0.6);
 }
 
@@ -406,21 +407,27 @@ section:has(.fit-picture) article p {
   background: rgba(206, 206, 103, 0.85);
   color: #111;
   border: none;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   cursor: pointer;
   flex-shrink: 0;
-  margin: 0 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
   transition: background 0.2s ease, transform 0.2s ease;
   line-height: 1;
 }
 
+.carousel-btn.prev { left: 16px; }
+.carousel-btn.next { right: 16px; }
+
 .carousel-btn:hover {
   background: #cece67;
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .carousel-dots {
