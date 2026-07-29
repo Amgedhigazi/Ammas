@@ -63,6 +63,67 @@ nav a.nav-active {
   padding: 4px 6px;
 }
 
+/* ── Nav icons ── */
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 5px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+/* ── Lightbox (shared across all pages) ── */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.93);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+}
+
+#lightbox-caption {
+  margin-top: 18px;
+  color: var(--yellow, #fbff00);
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 42px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+#lightbox-close:hover {
+  color: var(--olive, #cece67);
+}
+
 /* ── Mobile nav ── */
 @media (max-width: 768px) {
   header {

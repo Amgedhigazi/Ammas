@@ -49,41 +49,58 @@
 
   <section>
     <section class="Gallery">
-      <article>
+      <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/DSC_0660-2.jpg" alt="Breakfast"></div>
         <h4>Breakfast</h4>
       </article>
 
-      <article>
+      <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/AMG_5563.JPG" alt="Lunch"></div>
         <h4>Lunch</h4>
-        <p></p>
       </article>
 
-      <article>
+      <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/DSC04828.jpg" alt="Dinner"></div>
         <h4>Dinner</h4>
-        <p></p>
       </article>
 
-      <article>
+      <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/DSC05652.jpg" alt="Snacks"></div>
         <h4>Snacks</h4>
-        <p></p>
       </article>
 
-      <article>
+      <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/DSC05554.jpg" alt="Snacks and Combo"></div>
         <h4>Snacks and Combo</h4>
-        <p></p>
       </article>
 
-      <article>
+      <article onclick="openLightbox(this)">
         <div><img class="fit-picture" src="./img/mz fotos to print/DSC05307.jpg" alt="Pizza"></div>
         <h4>Pizza</h4>
       </article>
     </section>
   </section>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
+
+  <script>
+    function openLightbox(card) {
+      var img = card.querySelector('img');
+      var h4 = card.querySelector('h4');
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox-caption').textContent = h4 ? h4.textContent : img.alt;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+  </script>
 
   <hr>
 
