@@ -355,6 +355,7 @@ section:has(.fit-picture) article p {
 
 /* ── Enjoy Our Offer section ── */
 .enjoy-offer-section {
+  display: block !important;
   background-color: #1a1a1a;
   padding: 0 24px 36px;
 }
