@@ -353,6 +353,18 @@ section:has(.fit-picture) article p {
   color: #cece67;
 }
 
+/* ── Section strip heading ── */
+.section-strip-heading {
+  color: #cece67;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 22px 16px 8px;
+  background-color: #1e1e1e;
+}
+
 /* ── Light Menu Carousel ── */
 .menu-carousel-section {
   background-color: #1a1a1a;
