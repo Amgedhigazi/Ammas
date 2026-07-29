@@ -5,13 +5,13 @@
   var header = document.querySelector('header');
   if (header) {
     header.innerHTML =
-      '<a href="./Index.html" class="header-logo">' +
+      '<a href="./index.html" class="header-logo">' +
         '<img src="./img/Brownies logo.png" alt="Browniz">' +
         '<span class="header-brand"><span class="brand-name">Browniz</span><span class="brand-sub">Coffee House</span></span>' +
       '</a>' +
       '<nav>' +
         '<ul>' +
-          '<li><a href="./Index.html"><span class="nav-icon"></span><span class="nav-label">Home</span></a></li>' +
+          '<li><a href="./index.html"><span class="nav-icon"></span><span class="nav-label">Home</span></a></li>' +
           '<li><a href="./Menu.html"><span class="nav-icon"></span><span class="nav-label">Menu</span></a></li>' +
           '<li><a href="./Service and Event.html"><span class="nav-icon"></span><span class="nav-label">Services</span></a></li>' +
           '<li><a href="./Team.html"><span class="nav-icon"></span><span class="nav-label">Team</span></a></li>' +
@@ -21,7 +21,7 @@
   }
 
   /* ── Active nav link ── */
-  var page = location.pathname.split('/').pop() || 'Index.html';
+  var page = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('nav a').forEach(function (a) {
     if (a.getAttribute('href').split('/').pop() === page) {
       a.classList.add('nav-active');
@@ -30,7 +30,7 @@
 
   /* ── Nav icons (inline SVG, no external dependency) ── */
   var NAV_ICONS = {
-    'Index.html':                  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>',
+    'index.html':                  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>',
     'Menu.html':                   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M11 9H9V2H7v7H5V2H3v7a4 4 0 003 3.87V22h2v-9.13A4 4 0 0011 9zM16 6v8h3v8h2V2c-2.76 0-5 2.24-5 4z"/></svg>',
     'Service and Event.html':      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>',
     'Team.html':                   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>',
@@ -98,7 +98,7 @@
         '<div class="footer-col">' +
           '<h4>Quick Links</h4>' +
           '<ul>' +
-            '<li><a href="./Index.html">Home</a></li>' +
+            '<li><a href="./index.html">Home</a></li>' +
             '<li><a href="./Menu.html">Menu</a></li>' +
             '<li><a href="./Service and Event.html">Services &amp; Events</a></li>' +
             '<li><a href="./Team.html">Our Team</a></li>' +
