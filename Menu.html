@@ -22,7 +22,7 @@
 
   <main>
     <hr>
-    <div class="topimg"><img src="./img/Menu.jpg" alt="Menu"></div>
+    <div class="topimg"><img src="./img/Hearos/Menu.png" alt="Menu"></div>
     <h1>Our Menu</h1>
 
     <section>
@@ -87,31 +87,49 @@
     <hr>
   </main>
 
-  <section>
-    <article>
-      <img src="./img/New folder/Breakfastt.jpg" alt="Breakfast">
-      <h4>Breakfast</h4>
-      <p></p>
+  <section class="category-strip">
+    <article class="card-zoom" onclick="openLightbox(this)">
+      <img src="./img/New folder/Breakfastt.jpg" alt="Arabic Breakfast">
+      <h4>Arabic Breakfast</h4>
     </article>
 
-    <article>
-      <img src="./img/mz fotos to print/DSC_4258.jpg" alt="Lunch">
-      <h4>Lunch</h4>
-      <p></p>
+    <article class="card-zoom" onclick="openLightbox(this)">
+      <img src="./img/mz fotos to print/DSC_4258.jpg" alt="Platter">
+      <h4>Platter</h4>
     </article>
 
-    <article>
-      <img src="./img/New folder/BrowPost.jpg" alt="Dinner">
-      <h4>Dinner</h4>
-      <p></p>
+    <article class="card-zoom" onclick="openLightbox(this)">
+      <img src="./img/New folder/BrowPost.jpg" alt="Lamb Chops">
+      <h4>Lamb Chops</h4>
     </article>
 
-    <article>
-      <img src="./img/New folder/Combo.jpg" alt="Snacks and Combo">
-      <h4>Snacks and Combo</h4>
-      <p></p>
+    <article class="card-zoom" onclick="openLightbox(this)">
+      <img src="./img/New folder/Combo.jpg" alt="Combo">
+      <h4>Combo</h4>
     </article>
   </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
+
+  <script>
+    function openLightbox(card) {
+      const img = card.querySelector('img');
+      const caption = card.querySelector('h4').textContent;
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox-caption').textContent = caption;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
 
   <hr>
 

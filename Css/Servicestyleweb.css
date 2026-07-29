@@ -1,159 +1,195 @@
-
-   *{
-    box-sizing: border-box;
- }
-
- body {margin: 5px,5px;
- font-family: Arial, Helvetica, sans-serif;
-background-image: url(../img/Servises.jpg);
-background-color: rgb(226, 226, 222);
-background-size: 2550px ,700px;
-background-repeat: no-repeat;
-background-position: backdrop; 
-    
- }
-    
- header { 
-   background-color: #cece67;; 
-          border-bottom: 1px rgb(247, 151, 6) solid; 
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 3px;
- }
-
- header img {
-     width: 80px;
- }
- h1{
-  
-   margin: 5px,5px;
-   font-family: Arial, Helvetica, sans-serif;
-   color: #fbff00; 
-   font-size:x-large; 
-   font-weight: bold; 
-   color: yellow; 
-   text-align: left;
-    }
-
-
-.section { display:contents;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+header {
+  background-color: #cece67;
+  border-bottom: 2px solid rgb(247, 151, 6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header img {
+  width: 80px;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav li {
+  padding: 8px 16px;
+  margin: 2px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+header input {
+  display: none;
+}
+
+/* ── Hero image ── */
+main {
+  padding: 0;
+}
+
+.topimg {
+  width: 100%;
+}
+
+.topimg img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fbff00;
+  padding: 16px 20px 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(206, 206, 103, 0.4);
+  margin: 8px 0;
+}
+
+/* ── Intro paragraph ── */
+.toparagarph {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fbff00;
+  text-align: center;
+}
+
+/* ── Content rows (image + text) ── */
 .container {
-   background-size: 2550px
-    height: 600px; border:1px; solid: rgb(47, 0, 255); margin: 3;
-    background-color: rgb(176, 221, 153);  
-    display:flex;
-    align-items:center;
-    justify-items:center;
-    content-position:center;
-    margin: 3px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 30px 24px;
+  background-color: rgba(255, 255, 255, 0.93);
+  margin: 12px;
 }
 
-    .col {
-        width: 250px; height: 450px;
-        0px; background-color:yellow; align-items::after;
-        border: 1px solid rgb(0, 50pix, 0); padding: 40px; margin: 20px;
-        }
-     nav ul {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        list-style: none;
+.container img {
+  width: 340px;
+  height: 240px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 
-     }
+.container article {
+  flex: 1 1 300px;
+  max-width: 520px;
+  font-size: 15px;
+  color: #111;
+  line-height: 1.7;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
 
-     nav li {
-      border: 1px, rgb(183, 220, 20);
-      padding: 10px;
-      margin: 20px;
-      background-color: #cece67;
-      font-weight: bold;
-      text-decoration: none;
+.container article h2 {
+  font-size: 20px;
+  color: #5a3e00;
+  margin-bottom: 10px;
+}
 
-     }
+.container article h4 {
+  font-size: 15px;
+  color: #5a3e00;
+  margin: 12px 0 6px;
+}
 
-     nav a:hover {
-      background-color: #cece67;
-     }
+/* ── Copyright section ── */
+.Colum {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px 28px;
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+  line-height: 1.7;
+}
 
-     main {
-        margin: 9PX;}
-        
-      .h1 {font-family:Arial, Helvetica, sans-serif; 
-      font-size:x-large; 
-      font-weight: bold; 
-      color: yellow; text-align: center;}
+.Colum h4 {
+  color: #cece67;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
 
+.Colum a {
+  color: #cece67;
+}
 
 section {
-   background-size: 2550px
-   display:flex;
-       margin: 10px;
-       display: flex;
-    align-items:center;
-    justify-content:center;
-    margin:1px;
+  display: block;
 }
 
-section img {
-    width: 700px;
-    display: flex;
-    align-self:center;
-    justify-content:center;
-    margin: 3px;
-    padding: 3px;
-}
-     article {
-      width: 700px;
-        border: 0px red solid;
-        padding: 5px;
-        margin: 5px;
-        font-family:Arial, Helvetica, sans-serif; 
-   font-size:medium; 
-   font-weight:lighter; 
-   color: rgb(0, 0, 0); 
-   text-align:center;
-     }
-
-
-     .toparagarph {border: 0px red solid;
-      padding: 45px;
-      margin: 32px;
-  font-family:Arial, Helvetica, sans-serif; 
-  font-size:x-large; 
-  font-weight: bold; 
-  color: #fbff00; 
-  text-align: center;}
- 
-.Colum {
-   width: 600px;
-        border: 0px red solid;
-        padding: 25px;
-        margin: 25px;
-    justify-content: center;
-    font-family:Arial, Helvetica, sans-serif; 
-   font-size:medium; 
-   font-weight:lighter; 
-   color: rgb(0, 0, 0); 
-   text-align: center;
+/* ── Footer ── */
+footer {
+  width: 100%;
+  margin-top: auto;
 }
 
+.Foot {
+  background-color: #cece67;
+  font-size: 14px;
+  font-weight: 400;
+  color: #111;
+  text-align: center;
+  border-top: 2px solid #5eff00;
+  padding: 20px;
+  margin-top: 12px;
+}
 
+.Foot h4 {
+  display: inline;
+  font-size: 15px;
+}
 
-.Foot{
-   background-color: #cece67;
-  background-size: 2550px ,655px;
-  font-family:Arial, Helvetica, sans-serif; 
-  font-size:medium; 
-  font-weight:lighter; 
-  color: rgb(0, 0, 0); text-align: center;
-  border: 2px #5eff00 solid;
-  padding: 30px;
- }
-   
-
-   .foot img{
-      size: 10px;
-   }
+.Foot a {
+  color: #333;
+  text-decoration: none;
+}

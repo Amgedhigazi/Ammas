@@ -1,192 +1,381 @@
-
-   *{
-      box-sizing: border-box;
-   }
-  
-   body {margin: 5px,5px;
-   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(../img/Menu.jpg);
-  background-color: rgb(226, 226, 222);
-  background-size: 2550px ,655px;
-  background-repeat: no-repeat;
-  background-position: backdrop; 
-      
-   }
-      
-   header { 
-      background-color: #cece67;; 
-            border-bottom: 1px rgb(247, 151, 6) solid; 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 3px;
-   }
-  
-  
-   header img {
-       width: 80px;
-   }
-  
-  h1{
-  
-     margin: 5px,5px;
-   font-family: Arial, Helvetica, sans-serif;
-   color: #fbff00; 
-   font-size:x-large; 
-   font-weight: bold; 
-   color: yellow; 
-   text-align: left;
-  }
-  .section { display:flex;
-  }
-  
-  .container {
-      width: 2540px; height: 600px; border:1px; solid: rgb(47, 0, 255); margin: 3 auto;
-      background-color: rgb(199, 238, 189);  
-      display:flex;
-      align-items:center;
-      justify-items: center;
-      content-position:center;
-      margin: 3px;
-  }
-  
-      .col {
-          width: 260px; height: 490px;
-          background-color:yellow; align-items::after;
-          border: 1px solid rgb(0, 100px, 0); padding: 25px; margin: 50px;
-          }
-  
-        
-       nav ul {
-          display: flex;
-          padding: 0;
-          margin: 0;
-          list-style: none;
-  
-       }
-  
-       nav li {
-         border: 1px, rgb(183, 220, 20);
-         padding: 10px;
-         margin: 20px;
-         background-color: #cece67;
-         font-weight: bold;
-         text-decoration: none;
-  
-       }
-  
-       nav a:hover {
-         background-color: #cece67;
-      }
-  
-       main {
-          margin: 12pix;}
-          
-        .h1 {font-family:Arial, Helvetica, sans-serif; 
-        font-size:x-large; 
-        font-weight: bold; 
-        color: yellow; text-align: center;}
-  
-  
-  section { display:flex;
-         margin: 5px;
-         display: flex;
-      align-items:center;
-      justify-content:center;
-      margin: 3px;
-  }
-  
-  section img {
-      width: 400px;
-      display: flex;
-      align-self:center;
-      justify-content:center;
-      margin: 3px;
-  }
-       article {
-          border: 0px red solid;
-          padding: 30px;
-          margin: 20px;}
-     .fit-picture {
-           width: 200px;
-           display: flex;
-           align-self:center;
-       }
-  
-  .toparagarph {border: 0px red solid;
-      padding: 45px;
-      margin: 77px;
-  font-family:Arial, Helvetica, sans-serif; 
-  font-size:x-large; 
-  font-weight: bold; 
-  color: #fbff00; 
-  text-align: center;
-  }
-       
-  
-.container2{
-   width: 2550px;
-   display: flex;
- flex-direction: row;
-   justify-content:space-between;
-   margin: 3px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-  .THECHIFF { 
-   width: 50px;
-   display:flow-root;
-   justify-content:space-between;
-   flex-direction: row;
-   padding:1px;
-   margin: 50px;
-  font-family:Arial, Helvetica, sans-serif; 
-  font-size:medium; 
-  font-weight: bold; 
-  color: #000000; 
-  text-align: center;
-
-     }
-
-.section
-{ display:contents;
-   flex-direction: row;
-   justify-content:space-between;
-   flex-direction: row;
-   border: 4px red solid;
-      padding: 45px;
-      margin: 120px;
-
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-     .Muzamel{
-      width: 850px;
-      display:flow-root;
-      justify-content:space-between;
-      flex-direction: row;
-      padding:1px;
-      margin: 100px;
-     font-family:Arial, Helvetica, sans-serif; 
-     font-size:medium; 
-     font-weight: lighter; 
-     color: #000000; 
-     text-align: center;
-     border: 0px #ffae00 solid;
+/* ── Header ── */
+header {
+  background-color: #cece67;
+  border-bottom: 2px solid rgb(247, 151, 6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-     
- }
-    
+header > img {
+  width: 80px;
+  height: auto;
+}
 
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-     .Foot{
-      background-color: #cece67;
-     background-size: 2550px ,655px;
-     font-family:Arial, Helvetica, sans-serif; 
-     font-size:medium; 
-     font-weight:lighter; 
-     color: rgb(0, 0, 0); text-align: center;
-     border: 2px #5eff00 solid;
-                padding: 30px;
-   
-     }
+nav li {
+  padding: 8px 16px;
+}
 
-     
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  font-size: 15px;
+  transition: color 0.25s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+header input {
+  display: none;
+}
+
+/* ── Hide hr dividers ── */
+hr {
+  display: none;
+}
+
+/* ── Main / hero ── */
+main {
+  padding: 0;
+}
+
+.topimg {
+  width: 100%;
+}
+
+.topimg img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fbff00;
+  padding: 18px 24px 10px;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+/* ── Intro paragraph ── */
+.toparagarph {
+  padding: 16px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fbff00;
+  text-align: center;
+  border: none;
+}
+
+section:has(.toparagarph) {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* ── 7 Menu category cards ── */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 28px 20px;
+  background-color: #1e1e1e;
+}
+
+.col {
+  width: 200px;
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.5;
+  text-align: left;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.col:hover {
+  transform: translateY(-4px);
+  border-color: #cece67;
+}
+
+.col h4 {
+  color: #cece67;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.col a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fit-picture {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  margin-top: 12px;
+  border-radius: 5px;
+}
+
+/* ── 4-card centered strip (Breakfast / Lunch / Dinner / Snacks) ── */
+.category-strip {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 30px 24px;
+  background-color: transparent;
+  overflow-x: auto;
+}
+
+.category-strip article {
+  flex: 0 0 auto;
+  width: 160px;
+  text-align: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.28);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.category-strip article:hover {
+  transform: translateY(-6px);
+  border-color: #cece67;
+}
+
+.category-strip article img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.category-strip article:hover img {
+  transform: scale(1.04);
+}
+
+.category-strip article h4 {
+  color: #fbff00;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px 6px;
+  margin: 0;
+}
+
+.category-strip article p {
+  display: none;
+}
+
+/* ── Muzamel (about) section — image + text side by side ── */
+.Muzamel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  padding: 40px 32px;
+  background-color: #1a1a1a;
+}
+
+.Muzamel article {
+  border: none;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.Muzamel article:first-child {
+  flex: 0 0 340px;
+}
+
+.Muzamel article img {
+  width: 340px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.Muzamel article:last-child {
+  flex: 1 1 0;
+  max-width: 520px;
+  flex-shrink: 1;
+}
+
+.Muzamel article p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #ccc;
+}
+
+.Muzamel article h4 {
+  font-size: 20px;
+  color: #cece67;
+  margin-bottom: 14px;
+  display: block;
+}
+
+/* ── 7-card food gallery strip (last section) ── */
+section:has(.fit-picture) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: center;
+  overflow-x: auto;
+  gap: 14px;
+  padding: 24px 20px;
+  background-color: #1e1e1e;
+}
+
+section:has(.fit-picture) article {
+  flex: 0 0 auto;
+  width: 185px;
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+section:has(.fit-picture) article:hover {
+  transform: translateY(-4px);
+  border-color: #cece67;
+}
+
+section:has(.fit-picture) article .fit-picture {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 0;
+  margin: 0;
+}
+
+section:has(.fit-picture) article h4 {
+  color: #cece67;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px 10px 4px;
+  margin: 0;
+}
+
+section:has(.fit-picture) article p {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 4px 10px 12px;
+  margin: 0;
+}
+
+/* ── Lightbox ── */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+#lightbox-caption {
+  margin-top: 16px;
+  color: #fbff00;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+}
+
+#lightbox-close:hover {
+  color: #cece67;
+}
+
+/* ── Footer ── */
+footer {
+  width: 100%;
+  margin-top: auto;
+}
+
+.Foot {
+  background-color: #cece67;
+  border-top: 2px solid #5eff00;
+  padding: 20px 24px;
+  font-size: 14px;
+  color: #111;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.Foot h4 {
+  display: inline;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.Foot a {
+  color: #333;
+  text-decoration: none;
+}
