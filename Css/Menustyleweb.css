@@ -409,39 +409,65 @@ section:has(.fit-picture) article p {
 }
 
 .offer-card h4 {
-  color: #cece67;
   font-size: 13px;
   font-weight: bold;
-  padding: 10px 8px;
-  margin: 0;
 }
 
 .offer-card.promo-tall {
   width: 220px;
+  height: 300px;
+  position: relative;
 }
 
 .offer-card.promo-tall .fit-picture {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
+  background-color: #1a1a1a;
   display: block;
+}
+
+.offer-card.promo-tall h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  color: #fbff00;
+  font-size: 13px;
+  padding: 20px 8px 10px;
+  margin: 0;
 }
 
 .offer-card.card-zoom {
   width: 200px;
+  height: 200px;
+  position: relative;
 }
 
 .offer-card.card-zoom img {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
-  object-position: center;
+  height: 100%;
+  object-fit: contain;
+  background-color: #1a1a1a;
   display: block;
   transition: transform 0.35s ease;
 }
 
 .offer-card.card-zoom:hover img {
   transform: scale(1.06);
+}
+
+.offer-card.card-zoom h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  color: #fbff00;
+  font-size: 13px;
+  padding: 20px 8px 10px;
+  margin: 0;
 }
 
 @media (max-width: 600px) {
