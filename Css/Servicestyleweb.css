@@ -123,6 +123,27 @@ hr {
   gap: 24px !important;
 }
 
+/* ── Service enquiry button ── */
+.enquire-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 11px 22px;
+  background-color: #cece67;
+  color: #111;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.enquire-btn:hover {
+  background-color: #b8b850;
+  transform: translateY(-2px);
+}
+
 /* ── Copyright section ── */
 .Colum {
   max-width: 700px;

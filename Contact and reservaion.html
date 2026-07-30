@@ -70,8 +70,8 @@
   </section>
 
   <!-- Reservation form -->
-  <section class="reservation-section">
-    <h2>Book Your Table</h2>
+  <section class="reservation-section" id="book">
+    <h2 id="form-title">Book Your Table</h2>
     <form class="reservation-form"
           action="mailto:aamas.steakhouse@gmail.com"
           method="POST"
@@ -104,10 +104,23 @@
           <option>21:00</option>
         </select>
       </div>
-      <textarea name="Message" placeholder="Special requests or dietary requirements…" rows="3"></textarea>
-      <button type="submit">Reserve My Table</button>
+      <textarea id="form-message" name="Message" placeholder="Special requests or dietary requirements…" rows="3"></textarea>
+      <button type="submit">Send Enquiry</button>
     </form>
   </section>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var service = params.get('service');
+      if (service) {
+        var title = document.getElementById('form-title');
+        var msg = document.getElementById('form-message');
+        if (title) title.textContent = 'Enquire: ' + service;
+        if (msg) msg.value = 'I am interested in: ' + service + '\n\n';
+      }
+    })();
+  </script>
 
   <footer>
     <div class="Foot">

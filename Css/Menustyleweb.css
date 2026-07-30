@@ -498,6 +498,7 @@ section:has(.toparagarph) {
 
 /* ── Combo Menu section ── */
 .combo-menu-section {
+  display: block;
   background-color: #111;
   padding: 36px 24px;
   border-top: 3px solid #cece67;
