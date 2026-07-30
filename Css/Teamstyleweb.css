@@ -221,6 +221,24 @@ section:has(.fit-picture) article p {
   color: #cece67;
 }
 
+@media (max-width: 768px) {
+  .container {
+    margin: 8px;
+    gap: 12px;
+    padding: 16px 12px;
+  }
+
+  .col {
+    width: calc(50% - 6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .col {
+    width: 100%;
+  }
+}
+
 /* ── Footer ── */
 footer {
   width: 100%;

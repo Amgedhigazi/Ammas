@@ -458,6 +458,18 @@ footer {
     font-size: 12px;
   }
 
+  /* Hero intro paragraph */
+  .toparagarph {
+    font-size: 15px !important;
+    padding: 12px 18px;
+    min-height: unset;
+  }
+
+  /* Non-home hero image */
+  .topimg img {
+    height: 200px;
+  }
+
   /* Service / Contact content rows */
   section.container {
     flex-direction: column;
@@ -493,9 +505,9 @@ footer {
     max-width: 100% !important;
   }
 
-  /* Col cards — smaller on tablet */
+  /* Col cards — 2 per row on tablet */
   .col {
-    width: 160px;
+    width: calc(50% - 10px);
   }
 
   /* Footer */
@@ -519,15 +531,19 @@ footer {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 22px !important;
-    padding: 12px 14px 6px !important;
+    font-size: 20px !important;
+    padding: 10px 14px 6px !important;
+  }
+
+  .toparagarph {
+    font-size: 14px !important;
   }
 
   .col {
-    width: calc(50% - 12px);
+    width: 100%;
   }
 
   .Gallery article {
-    width: 110px;
+    width: 120px;
   }
 }
