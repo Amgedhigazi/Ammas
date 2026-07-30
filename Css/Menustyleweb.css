@@ -83,10 +83,13 @@ section:has(.toparagarph) {
 
 .col {
   width: 200px;
+  display: flex;
+  flex-direction: column;
   background-color: #2a2a2a;
   border: 1px solid #3a3a3a;
   border-radius: 8px;
-  padding: 14px;
+  overflow: hidden;
+  padding: 0;
   font-size: 13px;
   color: #ccc;
   line-height: 1.5;
@@ -99,10 +102,25 @@ section:has(.toparagarph) {
   border-color: #cece67;
 }
 
+.col .fit-picture {
+  margin-top: 0;
+  border-radius: 0;
+  height: 150px;
+}
+
 .col h4 {
   color: #cece67;
   font-size: 14px;
-  margin-bottom: 8px;
+  margin: 0;
+  padding: 10px 14px 4px;
+}
+
+.col p {
+  font-size: 12px;
+  color: #aaa;
+  padding: 0 14px 14px;
+  margin: 0;
+  flex: 1;
 }
 
 .col a {
@@ -228,56 +246,103 @@ section:has(.toparagarph) {
   display: block;
 }
 
-/* ── 7-card food gallery strip (last section) ── */
-section:has(.fit-picture) {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  justify-content: center;
-  overflow-x: auto;
-  gap: 14px;
-  padding: 24px 20px;
+/* ── Our Various Rich Menu — responsive grid ── */
+.rich-menu-section {
   background-color: #1e1e1e;
+  padding: 36px 24px 40px;
 }
 
-section:has(.fit-picture) article {
-  flex: 0 0 auto;
-  width: 185px;
+.rich-menu-heading {
+  color: #cece67;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.rich-menu-intro {
+  color: #aaa;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+
+.rich-menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.rich-menu-grid article {
+  flex: 0 0 calc(25% - 12px);
+  min-width: 180px;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
   background-color: #2a2a2a;
   border: 1px solid #3a3a3a;
   border-radius: 8px;
   overflow: hidden;
+  cursor: pointer;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-section:has(.fit-picture) article:hover {
+.rich-menu-grid article:hover {
   transform: translateY(-4px);
   border-color: #cece67;
 }
 
-section:has(.fit-picture) article .fit-picture {
+.rich-menu-grid article .fit-picture {
   width: 100%;
-  height: 130px;
+  height: 150px;
   object-fit: cover;
-  border-radius: 0;
+  display: block;
   margin: 0;
+  border-radius: 0;
 }
 
-section:has(.fit-picture) article h4 {
+.rich-menu-grid article h4 {
   color: #cece67;
   font-size: 13px;
-  font-weight: bold;
-  padding: 10px 10px 4px;
+  padding: 10px 12px 4px;
   margin: 0;
+  text-align: left;
 }
 
-section:has(.fit-picture) article p {
+.rich-menu-grid article p {
   color: #aaa;
   font-size: 12px;
-  line-height: 1.4;
-  padding: 4px 10px 12px;
+  line-height: 1.5;
+  padding: 4px 12px 14px;
   margin: 0;
+  text-align: left;
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .rich-menu-grid article {
+    flex: 0 0 calc(33.33% - 11px);
+  }
+}
+
+@media (max-width: 600px) {
+  .rich-menu-grid article {
+    flex: 0 0 calc(50% - 8px);
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 380px) {
+  .rich-menu-grid article {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 /* ── Lightbox ── */
