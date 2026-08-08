@@ -122,10 +122,14 @@ hr {
 .kitchen-strip {
   background-color: #1e1e1e;
   padding: 36px 24px 40px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .kitchen-heading {
+  width: 100%;
   color: #cece67;
   font-size: 22px;
   font-weight: bold;
@@ -136,6 +140,7 @@ hr {
 }
 
 .kitchen-intro {
+  width: 100%;
   color: #aaa;
   font-size: 14px;
   font-style: italic;
@@ -146,9 +151,8 @@ hr {
 }
 
 .kitchen-strip article {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  vertical-align: top;
   width: calc(25% - 12px);
   min-width: 160px;
   background-color: #2a2a2a;
