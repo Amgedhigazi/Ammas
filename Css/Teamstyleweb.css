@@ -122,14 +122,10 @@ hr {
 .kitchen-strip {
   background-color: #1e1e1e;
   padding: 36px 24px 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  text-align: center;
 }
 
 .kitchen-heading {
-  width: 100%;
   color: #cece67;
   font-size: 22px;
   font-weight: bold;
@@ -140,7 +136,6 @@ hr {
 }
 
 .kitchen-intro {
-  width: 100%;
   color: #aaa;
   font-size: 14px;
   font-style: italic;
@@ -150,17 +145,25 @@ hr {
   line-height: 1.7;
 }
 
+.kitchen-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .kitchen-strip article {
   display: flex;
   flex-direction: column;
-  width: calc(25% - 12px);
+  width: calc(25% - 9px);
   min-width: 160px;
   background-color: #2a2a2a;
   border: 1px solid #3a3a3a;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  margin: 6px;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
