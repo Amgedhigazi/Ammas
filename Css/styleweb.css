@@ -40,7 +40,7 @@ header {
   inset: 0;
   background-image: url('../img/TO/Aamassteak.jpg');
   background-size: cover;
-  background-position: center right;
+  background-position: 75% center;
   background-repeat: no-repeat;
 }
 
@@ -48,7 +48,7 @@ header {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.35) 45%, transparent 70%);
+  background: linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.42) 50%, rgba(0,0,0,0.15) 100%);
 }
 
 .hero-text {
@@ -224,21 +224,113 @@ footer {
   line-height: 1.8;
 }
 
-/* ── Mobile ── */
+/* ── 1261 – 1440px ── */
+@media (max-width: 1440px) {
+  .hero {
+    min-height: 86vh;
+    align-items: flex-start;
+  }
+
+  .hero-bg {
+    background-position: right center;
+  }
+
+  .hero-bg::before {
+    background: linear-gradient(to right,
+      rgba(0,0,0,0.80) 0%,
+      rgba(0,0,0,0.46) 48%,
+      rgba(0,0,0,0.12) 100%);
+  }
+
+  .hero-text {
+    width: 60%;
+    padding: 60px 36px 60px 56px;
+    margin-top: 72px;
+  }
+
+  .hero-h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  .hero-line {
+    font-size: 20px;
+  }
+}
+
+/* ── 1101 – 1260px ── */
+@media (max-width: 1260px) {
+  .hero {
+    min-height: 84vh;
+  }
+
+  .hero-bg::before {
+    background: linear-gradient(to right,
+      rgba(0,0,0,0.82) 0%,
+      rgba(0,0,0,0.50) 48%,
+      rgba(0,0,0,0.15) 100%);
+  }
+
+  .hero-text {
+    width: 66%;
+    padding: 52px 32px 52px 48px;
+    margin-top: 52px;
+  }
+
+  .hero-h1 {
+    font-size: 44px;
+    margin-bottom: 26px;
+  }
+
+  .hero-line {
+    font-size: 19px;
+  }
+}
+
+/* ── 769 – 1100px ── */
+@media (max-width: 1100px) {
+  .hero {
+    min-height: 82vh;
+  }
+
+  .hero-bg::before {
+    background: linear-gradient(to right,
+      rgba(0,0,0,0.85) 0%,
+      rgba(0,0,0,0.58) 50%,
+      rgba(0,0,0,0.20) 100%);
+  }
+
+  .hero-text {
+    width: 76%;
+    padding: 44px 28px 44px 40px;
+    margin-top: 32px;
+  }
+
+  .hero-h1 {
+    font-size: 38px;
+    margin-bottom: 22px;
+  }
+
+  .hero-line {
+    font-size: 17px;
+  }
+}
+
+/* ── 641 – 768px: only font/size changes, background stays from 769–1100 range ── */
 @media (max-width: 768px) {
   .hero {
     min-height: 75vh;
   }
 
   .hero-text {
-    width: 92%;
-    padding: 40px 20px 40px 24px;
-    margin-top: 0;
+    width: 86%;
+    padding: 34px 22px 34px 28px;
+    margin-top: 16px;
   }
 
   .hero-h1 {
-    font-size: 28px;
-    margin-bottom: 24px;
+    font-size: 32px;
+    margin-bottom: 20px;
   }
 
   .hero-line {
@@ -250,23 +342,61 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+/* ── 481 – 640px: switch background focal point now that text is near full-width ── */
+@media (max-width: 640px) {
   .hero {
-    min-height: 65vh;
+    min-height: 68vh;
+  }
+
+  .hero-bg {
+    background-position: 75% center;
+  }
+
+  .hero-bg::before {
+    background: linear-gradient(to bottom,
+      rgba(0,0,0,0.76) 0%,
+      rgba(0,0,0,0.55) 60%,
+      rgba(0,0,0,0.36) 100%);
   }
 
   .hero-text {
-    width: 100%;
-    padding: 32px 16px;
+    width: 94%;
+    padding: 28px 18px 28px 20px;
+    margin-top: 0;
   }
 
   .hero-h1 {
-    font-size: 24px;
+    font-size: 26px;
+    margin-bottom: 16px;
   }
 
   .hero-line {
     font-size: 14px;
-    line-height: 1.55;
+  }
+}
+
+/* ── ≤480px ── */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero-bg::before {
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .hero-text {
+    width: 100%;
+    padding: 22px 16px;
+  }
+
+  .hero-h1 {
+    font-size: 22px;
+  }
+
+  .hero-line {
+    font-size: 13px;
+    line-height: 1.6;
   }
 
   .specialties-desc {
